@@ -1,12 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: staging-customerName-projectName-frontend-cert
-  namespace: staging-customerName-projectName-frontend
+  name: staging-johnpofo-monapp3-frontend-cert
+  namespace: staging-johnpofo-monapp3-frontend
 spec:
-  secretName: staging-customerName-projectName-frontend-tls
+  secretName: staging-johnpofo-monapp3-frontend-tls
   dnsNames:
-    - staging.example.flapi.org
+    - staging.mydomain.flapi.org
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer

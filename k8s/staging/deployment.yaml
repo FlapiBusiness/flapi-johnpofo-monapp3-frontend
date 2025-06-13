@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: staging-customerName-projectName-frontend-deployment
-  namespace: staging-customerName-projectName-frontend
+  name: staging-johnpofo-monapp3-frontend-deployment
+  namespace: staging-johnpofo-monapp3-frontend
   labels:
-    app: staging-customerName-projectName-frontend
+    app: staging-johnpofo-monapp3-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: staging-customerName-projectName-frontend
+      app: staging-johnpofo-monapp3-frontend
   template:
     metadata:
       labels:
-        app: staging-customerName-projectName-frontend
+        app: staging-johnpofo-monapp3-frontend
     spec:
       containers:
-        - name: staging-customerName-projectName-frontend
-          image: corentin35/customerName-projectName-frontend:staging-${TAG_VERSION}
+        - name: staging-johnpofo-monapp3-frontend
+          image: corentin35/johnpofo-monapp3-frontend:staging-${TAG_VERSION}
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
